@@ -6,9 +6,9 @@ The goal of this project is to simulate a "Delivery" person that picks up and dr
 Game: https://play.unity.com/mg/other/webgl-builds-221830
 
 ## Updates
-Added SFX
-Added Timer
-Added Package Text
-Added Delivery Text
-Added Main Menu
-Added Game Over
+- Added SFX
+- Added Timer
+- Added Package Text
+- Added Delivery Text
+- Added Main Menu
+- Added Game Over
