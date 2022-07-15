@@ -8,6 +8,7 @@ public class Player : MonoBehaviour
     [SerializeField] float defaultSpeed = 13;
     [SerializeField] float slowSpeed = 8;
     [SerializeField] float boostSpeed = 25;
+    [SerializeField] AudioSource slowAudio, speedAudio;
     public float moveSpeed;
     // Start is called before the first frame update
     void Start()
@@ -29,11 +30,13 @@ public class Player : MonoBehaviour
         if (collision.CompareTag("SpeedBoost"))
         {
             moveSpeed = boostSpeed;
+            speedAudio.Play();
             Debug.Log("I am SPEEEEEEEEED");
         }
         else if (collision.CompareTag("SlowBoost"))
         {
             moveSpeed = slowSpeed;
+            slowAudio.Play();
             Debug.Log("SLOOOW");
         }
     }

@@ -9,6 +9,7 @@ public class Collision : MonoBehaviour
     Color32 hasPackageColor = new Color32(255,0,0,255);
     Color32 noPackageColor = new Color32(255, 255, 255,255);
 
+    [SerializeField] AudioSource packageAudio, customerAudio;
 
     NumPackages numPackages;
     [SerializeField] TMP_Text numPackages_text;
@@ -26,12 +27,14 @@ public class Collision : MonoBehaviour
         {
             hasPackage = true;
             spriteRenderer.color = hasPackageColor;
+            packageAudio.Play();
             Debug.Log("You picked up a package");
             Destroy(collision.gameObject, 0f);
         }
         else if (collision.CompareTag("Customer") && hasPackage)
         {
             numPackages.DeliveredPackage();
+            customerAudio.Play();
             hasPackage = false;
             spriteRenderer.color = noPackageColor;
             Destroy(collision.gameObject, 0f);
