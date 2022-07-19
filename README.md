@@ -12,3 +12,7 @@ Game: https://play.unity.com/mg/other/webgl-builds-221830
 - Added Delivery Text
 - Added Main Menu
 - Added Game Over
+
+## What I have learned
+- Scene Management
+- Unity 2D fundamentals
